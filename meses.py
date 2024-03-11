@@ -1,6 +1,15 @@
 import streamlit as st
 from datetime import datetime, timedelta
+import os
+os.system('apt-get install -y locales')
+
+# Configuração da localização para português do Brasil
+os.system('locale-gen pt_BR.utf-8')
+os.system('update-locale LANG=pt_BR.utf-8 LC_TIME=pt_BR.utf-8')
+
+# Agora, você pode usar a biblioteca locale no seu código
 import locale
+locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
 
 
 locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
@@ -15,7 +24,7 @@ numero_do_mes = mes_passado.month
 mes_only = mes_passado.strftime('%B').capitalize()
 nome_mes_formatado = mes_passado.strftime('%B de %Y').capitalize()
 
-logo_img = "logo2.jpg"
+logo_img = "imgs/logo2.jpg"
 st.markdown("<h2 style='color: gray; font-size: 3em;'>Arquivos Mercadeli</h2>", unsafe_allow_html=True)
 st.image(logo_img,use_column_width=True)
 st.markdown(f"<h1 style='color: gray; font-size: 1.5em;'>{nome_mes_formatado}</h1>", unsafe_allow_html=True)
