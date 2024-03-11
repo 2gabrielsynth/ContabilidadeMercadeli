@@ -24,7 +24,7 @@ numero_do_mes = mes_passado.month
 mes_only = mes_passado.strftime('%B').capitalize()
 nome_mes_formatado = mes_passado.strftime('%B de %Y').capitalize()
 
-logo_img = "imgs/logo2.jpg"
+logo_img = "logo2.jpg"
 st.markdown("<h2 style='color: gray; font-size: 3em;'>Arquivos Mercadeli</h2>", unsafe_allow_html=True)
 st.image(logo_img,use_column_width=True)
 st.markdown(f"<h1 style='color: gray; font-size: 1.5em;'>{nome_mes_formatado}</h1>", unsafe_allow_html=True)
